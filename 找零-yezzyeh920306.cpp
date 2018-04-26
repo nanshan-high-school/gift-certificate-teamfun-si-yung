@@ -3,76 +3,76 @@
 
 using namespace std;
 int main(){
-	int fst = 0, snd = 0;
-	int num;
-	cout << "½Ğ¿é¤J°Ó«~­Ó¼Æ";
-	cin >> num;
-	 
+    int fst = 0, snd = 0;
+    int num;
+    cout << "è«‹è¼¸å…¥å•†å“å€‹æ•¸";
+    cin >> num;
+
 /*	int pri[num], gain[num];
 	for(int i = 0; i < num; i++){
-		cout << "½Ğ¿é¤J²Ä"<<i+1<<"­Ó°Ó«~ªºª÷ÃB";
+		cout << "è«‹è¼¸å…¥ç¬¬"<<i+1<<"å€‹å•†å“çš„é‡‘é¡";
 		cin >> pri[i];
 	}*/
-	int chart[num][(int)pow(2,num)];
-	for(int k = 0; k < num; k++){
-		for(int l = 0; l < (int)pow(2,num); l++){
-			if(k == 0){
-				if((l % 2) == 0){
-					chart[k][l] = 0;
-				}else if((l % 2 ) == 1){
-					chart[k][l] = 1;
-				}
-			}else if(k != 0){
-				for(int m = 1; m <= k; m++){ 
-					if ((l / (int)pow(2,m)) % 2 == 0){
-						chart[k][l] = 0;
-					}
-					else{
-						chart[k][l] = 1;
-					}
-				}
-			}
-			
-			cout << chart[k][l];
-					
-		}
-		cout << endl;
-		s
-	}
+    int chart[num][(int)pow(2,num)];
+    for(int k = 0; k < num; k++){
+        for(int l = 0; l < (int)pow(2,num); l++){
+            if(k == 0){
+                if((l % 2) == 0){
+                    chart[k][l] = 0;
+                }else if((l % 2 ) == 1){
+                    chart[k][l] = 1;
+                }
+            }else if(k != 0){
+                for(int m = 1; m <= k; m++){
+                    if ((l / (int)pow(2,m)) % 2 == 0){
+                        chart[k][l] = 0;
+                    }
+                    else{
+                        chart[k][l] = 1;
+                    }
+                }
+            }
+
+            cout << chart[k][l];
+
+        }
+        cout << endl;
+        s
+    }
 /*
 	0	1	k
-0	0	0	
+0	0	0
 1	1	1
-2	0	
+2	0
 3	1
 
-l	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+l
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	*/
-	/*¤§«á¥Î±¼ 
-	int k = 0,l = 0;
-	for (int q = 0; q <a; q++){
-		cout << chart[k][l];
-		k++;
-		if (q>num){
-			cout <<"\n";
-			l++;
-		}
-	}
-	*/
+    /*ä¹‹å¾Œç”¨æ‰
+    int k = 0,l = 0;
+    for (int q = 0; q <a; q++){
+        cout << chart[k][l];
+        k++;
+        if (q>num){
+            cout <<"\n";
+            l++;
+        }
+    }
+    */
 /*	int total[(int)pow(2,num)] = {0};
 	for(int m = 0; m < (int)pow(2,num); m++){
 		for(int n = 0; n < num; n++){
@@ -81,7 +81,7 @@ l
 			}
 		}
 	}
-	
+
 	for(int o = 0; o < (int)pow(2,num); o++){
 		if(total[o] > 100){
 			total[o] = total[o] % 100;
@@ -92,14 +92,14 @@ l
 		}
 		cout << gain[o] <<endl;
 	}*/
-	
-	
-	 
-	
+
+
+
+
 }
-/*    
+/*
 	1	2	3	4	5
-a		
+a
 b
 
 
