@@ -1,4 +1,4 @@
-#include <iostream>
+ .#include <iostream>
 #include <math.h>
 
 using namespace std;
@@ -8,14 +8,16 @@ int main(){
     cout << "請輸入商品個數";
     cin >> num;
 
-/*	int pri[num], gain[num];
+	int pri[num], gain[num];
 	for(int i = 0; i < num; i++){
 		cout << "請輸入第"<<i+1<<"個商品的金額";
 		cin >> pri[i];
-	}*/
-    int chart[num][(int)pow(2,num)];
-    for(int k = 0; k < num; k++){
-        for(int l = 0; l < (int)pow(2,num); l++){
+	}
+    int e = (int)pow(2,num), chart[num][e];
+    
+    int k = 0, l = 0;
+    for(; k < num; k++){
+        for(; l < e; l++){
             if(k == 0){
                 if((l % 2) == 0){
                     chart[k][l] = 0;
@@ -37,7 +39,30 @@ int main(){
 
         }
         cout << endl;
-        s
+	}
+        int total[l] = {0}, p = 0, q = 0;
+        for (; p < l; p++){
+        	for (; q<k; q++){
+        		if (chart[p][q] = 1){
+				total[q] += pri[q];
+				}
+				
+			}
+		}
+		
+		int gain = 0, u = 0;
+		for (; u < e; u++){
+			if (toal[u] > gain){
+				gain = total[u]; 
+			}
+		}
+		
+		while (gain != total[u]){
+			u--;
+		}
+		
+		while (total[u] != )
+		
     }
 /*
 	0	1	k
@@ -73,8 +98,8 @@ l
         }
     }
     */
-/*	int total[(int)pow(2,num)] = {0};
-	for(int m = 0; m < (int)pow(2,num); m++){
+/*	int total[e] = {0};
+	for(int m = 0; m < e; m++){
 		for(int n = 0; n < num; n++){
 			if(chart[n][m] == '0'){
 				total[m] = total[m] + pri[n];
@@ -82,7 +107,7 @@ l
 		}
 	}
 
-	for(int o = 0; o < (int)pow(2,num); o++){
+	for(int o = 0; o < e; o++){
 		if(total[o] > 100){
 			total[o] = total[o] % 100;
 		}
@@ -91,23 +116,4 @@ l
 		gain[o] = 100 - total[o];
 		}
 		cout << gain[o] <<endl;
-	}*/
-
-
-
-
-}
-/*
-	1	2	3	4	5
-a
-b
-
-
-
-00000
-00001
-00010
-00011
-00100
-
-*/
+	}
